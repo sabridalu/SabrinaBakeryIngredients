@@ -1,0 +1,40 @@
+/* Import font PRIMA di @tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ffd6e9;
+  --accent: #340a36;
+  --white: #fff;
+  --text-main: #22223b;
+  --text-muted: #737373;
+  --text-pink: #6c1f70;
+}
+
+/* Font custom */
+.font-candy {
+  font-family: 'Emilys Candy', cursive;
+}
+
+/* Colori di testo */
+.text-main {
+  color: var(--text-main);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-pink {
+  color: var(--text-pink);
+}
+.text-accent {
+  color: var(--accent);
+}
+
+/* Applica font globale */
+body {
+  @apply font-candy bg-primary text-text-main;
+  background-color: var(--primary);
+}

@@ -1,0 +1,332 @@
+/* =======================
+   GLOBAL
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+:root {
+  --primary: #ffd6e9;
+  --accent: #340a36;
+  --white: #fff;
+  --text-main: #22223b;
+  --text-muted: #737373;
+  --text-pink: #6c1f70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Emilys Candy', cursive;
+  background: var(--primary);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =======================
+   HEADER
+======================= */
+.header {
+  position: relative;
+  color: var(--white);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url("/asset/sfondo.png") center/cover no-repeat;
+  min-height: 400px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(52, 10, 54, 0.4);
+  z-index: 0;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.header-logo {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-sub-title {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-top: 0.3rem;
+}
+
+.header-link:hover .header-title {
+  color: var(--primary);
+}
+
+.header-link:hover .header-logo {
+  box-shadow: 0 0 15px rgba(255, 214, 233, 0.8);
+  transform: scale(1.05);
+}
+
+/* =======================
+   PRODUCT GRID & CARD
+======================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.product-card-img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.product-card-body {
+  padding: 1rem;
+}
+
+.product-card-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.product-card-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* =======================
+   PRODUCT DETAIL
+======================= */
+.product-detail-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.product-detail-title {
+  font-size: 2.5rem;
+  color: var(--text-pink);
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-img img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-info {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.product-detail-info strong {
+  display: block;
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
+.product-list {
+  margin: 0.5rem 0 1rem 1.2rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.product-detail-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-top: 1rem;
+}
+
+/* =======================
+   SEARCH BAR & HEADER LIST
+======================= */
+.product-list-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(255, 214, 233, 0.7);
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+  background: var(--primary);
+  color: var(--accent);
+  padding: 1.5rem 2rem;
+  font-family: 'Emilys Candy', cursive;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--accent);
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-center {
+  font-size: 1.2rem;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.8rem;
+  filter: invert(15%) sepia(89%) saturate(900%) hue-rotate(280deg) brightness(90%) contrast(95%);
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .header-logo {
+    height: 130px;
+    width: 130px;
+  }
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-sub-title {
+    font-size: 1.1rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-detail-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+  }
+  .header-link {
+    flex-direction: column;
+  }
+  .header-logo {
+    height: 100px;
+    width: 100px;
+  }
+  .header-title {
+    font-size: 1.6rem;
+  }
+  .header-sub-title {
+    font-size: 1rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-detail-title {
+    font-size: 2rem;
+  }
+  .product-detail-img img {
+    max-height: 220px;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
