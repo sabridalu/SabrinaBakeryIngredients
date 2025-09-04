@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import products, { Product } from "../data/products";
 import "../style.css";
 
-export default function ProductDetail() {
+export default function ProductPage() {   // 👈 rinominato
   const { id } = useParams<{ id: string }>();
   const product = products.find((p: Product) => p.id.toString() === id);
 
@@ -12,10 +12,8 @@ export default function ProductDetail() {
 
   return (
     <div className="product-detail-card">
-      {/* Nome */}
       <h1 className="product-detail-title">{product.name}</h1>
 
-      {/* Dati prodotto */}
       <div className="product-detail-info">
         <p><strong>Ingredienti:</strong></p>
         <ul className="product-list">
@@ -43,7 +41,6 @@ export default function ProductDetail() {
         <p className="product-detail-price"><strong>Prezzo:</strong> {product.price} €</p>
       </div>
 
-      {/* Link indietro */}
       <Link to="/" className="btn-back">← Torna ai prodotti</Link>
     </div>
   );

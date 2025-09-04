@@ -35,6 +35,8 @@
 
 /* Applica font globale */
 body {
-  @apply font-candy bg-primary text-text-main;
+  font-family: 'Emilys Candy', cursive; /* 👈 qui metti il font diretto */
+  @apply bg-primary text-text-main;     /* 👈 qui solo classi tailwind */
+
   background-color: var(--primary);
 }

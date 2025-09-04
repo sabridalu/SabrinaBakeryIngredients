@@ -330,3 +330,21 @@ body {
     text-align: center;
   }
 }
+/* Modalità mobile */
+@media (max-width: 768px) {
+  .product-list-header {
+    flex-direction: column;   /* 🔥 impila titolo e searchbar */
+    align-items: center;      /* centra entrambi */
+    gap: 0.8rem;              /* riduce lo spazio */
+  }
+
+  .search-bar {
+    max-width: 100%;          /* 🔥 occupa tutta la larghezza */
+    width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}
