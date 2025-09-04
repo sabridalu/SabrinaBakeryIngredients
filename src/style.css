@@ -5,6 +5,7 @@
 
 :root {
   --primary: #ffd6e9;
+  --secondary: #f6dde9;
   --accent: #340a36;
   --white: #fff;
   --text-main: #22223b;
@@ -20,7 +21,7 @@
 
 body {
   font-family: 'Emilys Candy', cursive;
-  background: var(--primary);
+  background: var(--secondary);
   color: var(--text-main);
   line-height: 1.6;
 }
