@@ -349,6 +349,7 @@ body {
     padding: 0.7rem 1rem;
   }
 }
+
 /* Pulsanti categorie */
 .category-buttons {
   display: flex;
@@ -364,7 +365,7 @@ body {
   color: var(--accent);
   font-family: 'Emilys Candy', cursive;
   font-size: 1.1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -377,4 +378,57 @@ body {
 .category-btn.active {
   background: var(--accent);
   color: var(--white);
+}
+
+/* 🔽 Responsive: in mobile i bottoni si dispongono in colonna */
+@media (max-width: 768px) {
+  .category-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .category-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+/* Bottone toggle (visibile solo su mobile) */
+.filter-toggle-btn {
+  display: none;
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Emilys Candy', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1rem auto;
+}
+
+/* Category buttons default (desktop) */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Mobile: show toggle button and nascondi i pulsanti finché non aperti */
+@media (max-width: 768px) {
+  .filter-toggle-btn {
+    display: block;
+  }
+  .category-buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .category-buttons.open {
+    display: flex;
+  }
 }
